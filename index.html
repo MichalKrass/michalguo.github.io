@@ -42,7 +42,52 @@
 <br>
 	<center><img src='imgs/voice_clone.PNG' ></center>
 	<p><b>Fig.1. </b> Overview of the components of the high fidelity voice clone model. </p>
+<br>
+ <p><b>Table.1. </b> Demos for high fidelity (24k/48k) voice clone </p>
+<table class="table1">
+  <thead>
+	<tr>
+	  <th style="text-align: center">Target Speaker</th>
+	  <th style="text-align: center">Input</th>
+	  <th style="text-align: center">VC output</th>
+	</tr>
+  </thead>
+  <tbody>
+	<tr>
+	  <td style="text-align: center" rowspan="2"><strong>著名配音男演员</strong> <audio style="width: 230px;" controls="" preload="none" src="samples/aj.wav"></audio></td>
+	  <td style="text-align: center"><audio style="width: 230px;" controls="" preload="none" src="samples/aj_inp.wav"></audio></td>
+	  <td style="text-align: center"><audio style="width: 230px;" controls="" preload="none" src="samples/aj_vc.wav"></audio></td>
+	</tr>
 	
+	<tr>
+	  <td style="text-align: center" rowspan="2"><strong>Only Prosody</strong></td>
+	  <td style="text-align: center" rowspan="2"><strong>动漫二次元萌妹</strong> <audio style="width: 230px;" controls="" preload="none" src="samples/qd_00003.wav"></audio></td>
+	  <td style="text-align: center"><audio style="width: 230px;" controls="" preload="none" src="samples/qd_inp.wav"></audio></td>
+	  <td style="text-align: center"><audio style="width: 230px;" controls="" preload="none" src="samples/fig5/qd_vc.wav"></audio></td>
+	</tr>
+	
+	<tr>
+	  <td style="text-align: center"><img src='figs/p1_2_v1.png' ></td>
+	  <td style="text-align: center"><img src='figs/p2_2_v1.png' ></td>
+	  <td style="text-align: center"><img src='figs/p3_2_v1.png' ></td>
+	</tr>
+	
+<!-- 	<tr>
+	  <td style="text-align: center" rowspan="2"><strong>Content + Prosody</strong></td>
+	  <td style="text-align: center"><audio style="width: 230px;" controls="" preload="none" src="samples/fig5/bbf_000001_gen_c_ev+vq.wav"></audio></td>
+	  <td style="text-align: center"><audio style="width: 230px;" controls="" preload="none" src="samples/fig5/bbf_000001_gen_d_ev+vq.wav"></audio></td>
+	  <td style="text-align: center"><audio style="width: 230px;" controls="" preload="none" src="samples/fig5/bbf_000001_gen_e_ev+vq.wav"></audio></td>
+	</tr>
+	
+	<tr>
+	  <td style="text-align: center"><img src='figs/p1_3_v1.png' ></td>
+	  <td style="text-align: center"><img src='figs/p2_3_v1.png' ></td>
+	  <td style="text-align: center"><img src='figs/p3_3_v1.png' ></td>
+	</tr> -->
+  </tbody>
+</table>
+	
+
 <h2 id="system">2. System design<a name="2"></a></h2>
 <p>The architecture of IQDubbding is shown in Fig.1. In general the system follows an encoder-decoder framework, where three individual encoders are adopted, in charge of content extraction, prosody extraction and speaker representation respectively. 
 <br>
