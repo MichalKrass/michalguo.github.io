@@ -30,24 +30,22 @@
 
 <h2>Contents</h2>
 <ul>
-  <li><a href="#1">Professional voice clone</a></li>
-  <li><a href="#2">System design</a></li>
-  <li><a href="#3">Evaluation sample</a></li>
-    <ul>
-        <li><a href="#3.1">Training on ESD dataset</a></li>
-		<li><a href="#3.2">Training on ESD dataset and internal dataset (IND)</a></li>
-    </ul>
-  <li><a href="#4">Necessity and Contribution Analysis of Prosody Filter</a></li>
-<!--   <li><a href="#5">Demo for Dubbing</a></li> -->
+  <li><a href="#1">High Fidelity Voice Clone</a></li>
+  <li><a href="#2">Expressive Voice Vonversion for Dub</a></li>
+  <li><a href="#3">Streaming Real-time Voice Conversion</a></li>
+  <li><a href="#4">Accent Conversion</a></li>
+  <li><a href="#5">One-shot Vocie Vonversion</a></li>
+  <li><a href="#6">Sing Voice Conversion</a></li>
 </ul>
 
-<h2 id="abstract">1. Abstract<a name="1"></a></h2>
-<p>Prosody modeling is important, but still challenging in expressive voice conversion. As prosody is difficult to model, and other factors, e.g., speaker, environment and content, which are entangled with prosody in speech, should be removed in prosody modeling. In this paper, we present IQDubbing to solve this problem for expressive voice conversion. To model prosody, we leverage the recent advances in discrete self-supervised speech representation (DSSR). Specifically, prosody vector is first extracted from pre-trained VQWav2Vec model, where rich prosody information is embedded while most speaker and environment information are removed effectively by quantization. To further filter out the redundant information except prosody, such as content and partial speaker information, we propose two kinds of prosody filters to sample prosody from the prosody vector. Experiments show that IQDubbing is superior to baseline and comparison systems in terms of speech quality while maintaining prosody consistency and speaker similarity.</p>
-
+<h2 id="High Fidelity Voice Clone">1. High Fidelity Voice Clone<a name="1"></a></h2>
+<br>
+	<center><img src='imgs/voice_clone.PNG' ></center>
+	<p><b>Fig.1. </b> Overview of the components of the high fidelity voice clone model. </p>
+	
 <h2 id="system">2. System design<a name="2"></a></h2>
 <p>The architecture of IQDubbding is shown in Fig.1. In general the system follows an encoder-decoder framework, where three individual encoders are adopted, in charge of content extraction, prosody extraction and speaker representation respectively. 
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifically for the content extraction, an end-to-end ASR model is first adopted to take source audio as input and its encoder output, or the bottleneck feature (BN), is fed into the content encoder, resulting in a content vector representing the linguistic information. As for the prosody modeling, a pre-trained VQ-Wav2Vec model is adopted to process source audio and output the discrete representation -- VQW2V. The VQW2V is then fed into the prosody encoder, resulting in the prosody vector. To further filter out prosody-unrelated information from the prosody vector, we specifically design a prosody filter to get the filtered prosody vector. The decoder takes content vector, filtered prosody vector and speaker vector as input to reconstruct mel spectrum. Finally, Parallel WaveGAN is used to synthesize the converted speech. </p>
 	<center><img src='figs/fig1_v4.jpg' ></center>
 	<p><b>Fig.1. </b> Overview of the components of the proposed voice conversion model. First, prosody modeling is based on DSSR. DSSR is discrete
 self-supervised speech representation. Besides, two kinds of prosody filters: random downsample prosody filter(RDPF) and aligned downsample prosody filter(ADPF), are compared. </p>
