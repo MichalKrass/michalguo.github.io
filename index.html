@@ -146,47 +146,38 @@
 	<p align="center"><b>Fig.5. </b> Overview of the components of the accent conversion model. </p>
 <br>
 
-
-<h2>6. Sing Vocie Conversion <a name="6"></a></h2>
-
-
-<h2>4. Demo for Dubbing <a name="4"></a></h2>
-
-<p>The video demo for dubbing is shown as follow. The speechs of the two characters are respectively from VC results of target speaker IND_M1 and IND_F2, which is trained on internal dataset (IND) and ESD dataset.</p>
-<!-- 
-<b>&nbsp;&nbsp;&nbsp;&nbsp; Source Input: </b>
-<br>
-<video height="450" width="800" controls>
-  <source src="samples/video/haimian-demo-input.mp4" type="video/mp4">
-  </object> 
-</video>
-<br>
-<br>
-<br>
-
-<b>&nbsp;&nbsp;&nbsp;&nbsp; VC Output: </b>
-<br>
-<video height="450" width="800" controls>
-  <source src="samples/video/haimian-demo-VC.mp4" type="video/mp4">
-  </object> 
-</video>
-<br> -->
-
-<br>
-<center><p><b>Table.5. </b> Demo for Dubbing. </p></center>
-<table class="table2">
+<p><b>Table.5. </b> Demos for accent vocie conversion </p>
+<p>可实现方言音色的语音转换，和非方言音色（集内普通话音色）的方言迁移</p>
+<table class="table5">
   <thead>
 	<tr>
-	  <th style="text-align: center">Source Input</th>
-	  <th style="text-align: center">VC Output</th>
+	  <th style="text-align: center">Target Accent</th>
+	  <th style="text-align: center">Input</th>
+	  <th style="text-align: center">VC output1</th>
+	  <th style="text-align: center">VC output2 (方言迁移)</th>
 	</tr>
   </thead>
-  <tbody>	
+  <tbody>
 	<tr>
-	  <td style="text-align: center"><video height="450" width="740" controls><source src="samples/video/haimian-demo-input.mp4" type="video/mp4"></object> </video></td>
-	  <td style="text-align: center"><video height="450" width="740" controls><source src="samples/video/haimian-demo-VC.mp4" type="video/mp4"></object> </video></td>
+	  <td style="text-align: center"><strong>陕西话</strong> </td>
+	  <td style="text-align: center"><audio style="width: 230px;" controls="" preload="none" src="samples/inp_accent_shan.wav"></audio></td>
+	  <td style="text-align: center"><audio style="width: 230px;" controls="" preload="none" src="samples/vc_accent_sh.wav"></audio></td>
+	  <td style="text-align: center"><audio style="width: 230px;" controls="" preload="none" src="samples/vc_accent_sh_transfer.wav"></audio></td>
 	</tr>
+	
+	<tr>
+	  <td style="text-align: center"><strong>东北话</strong> </td>
+	  <td style="text-align: center"><audio style="width: 230px;" controls="" preload="none" src="samples/inp_accent_db.wav"></audio></td>
+	  <td style="text-align: center"><audio style="width: 230px;" controls="" preload="none" src="samples/vc_accent_db.wav"></audio></td>
+	  <td style="text-align: center"><audio style="width: 230px;" controls="" preload="none" src="samples/vc_accent_db_transfer.wav"></audio></td>
+	</tr>
+	  
+	<tr>
+	  <td style="text-align: center"><strong>东北味英语</strong> </td>
+	  <td style="text-align: center"><audio style="width: 230px;" controls="" preload="none" src="samples/inp_accent_eng.wav"></audio></td>
+	  <td style="text-align: center"><audio style="width: 230px;" controls="" preload="none" src="samples/vc_accent_eng.wav"></audio></td>
+	</tr>
+	  
   </tbody>
 </table>
-
 
